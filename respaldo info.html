@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../mamifero/iconos/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="../mamifero/Bootstrap5/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <title>Polar Bear - Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            width: 40%;
+        }
+        
+        button:hover {
+            background: #4b45a0;
+        }
+        .info {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <h1>Polar Bear</h1>
+        <img src="../mamifero/images/oso_polar.jpg" alt="Polar Bear">
+        <p><strong>Scientific Name:</strong> Ursus maritimus</p>
+        
+        <button onclick="showInfo('diet')"><i class="fa-solid fa-utensils"></i> Diet and Hunting</button>
+        <button onclick="showInfo('characteristics')"><i class="fa-solid fa-paw"></i> Physical Characteristics</button>
+        <button onclick="showInfo('habitat')"><i class="fa-solid fa-snowflake"></i> Habitat</button>
+        <button onclick="showInfo('fun-facts')"><i class="fa-solid fa-lightbulb"></i> Fun Facts</button>
+        <button id="playSound"><i class="fa-solid fab fa-soundcloud"></i> Bear´s sound</button>
+        <audio id="audio" src="../mamifero/sounds/sonido oso polar.mp3"></audio>
+
+        
+    </div>
+    <div class="info" id="diet">
+        <h2>Diet and Hunting</h2>
+        <ul>
+            <li><strong>Main Diet:</strong> They are carnivores, primarily feeding on seals, especially the ringed seal (Pusa hispida) and the bearded seal (Erignathus barbatus).</li>
+            <li><strong>Hunting Method:</strong> Polar bears are agile hunters in extreme conditions. One of their main techniques is waiting motionless near breathing holes used by seals in the ice. When a seal emerges to breathe, the bear swiftly captures it.</li>
+            <li><strong>Occasionally Eat:</strong> Carrion, fish, birds, eggs, and even vegetation when food is scarce.</li>
+            <li><strong>Fasting:</strong> In summer, when the ice melts, they can go months without eating, surviving on their fat reserves.</li>
+        </ul>
+        <img src="../mammal/images/seal_polar.webp" alt="Polar Bear Hunting">
+        <button onclick="goBack()">Back</button>
+    </div>
+    
+    <div class="info" id="characteristics">
+        <h2>Physical Characteristics</h2>
+        <ul>
+            <li><strong>Size:</strong> Males measure between 2.4 and 3 meters in length, while females are smaller, ranging from 1.8 to 2.4 meters.</li>
+            <li><strong>Weight:</strong> Males weigh between 350 and 700 kg, but some exceed 800 kg. Females weigh between 150 and 400 kg.</li>
+            <li><strong>Fur:</strong> Their fur appears white but is actually transparent, reflecting light. Beneath their fur, their skin is black, helping them absorb heat.</li>
+            <li><strong>Fat Layer:</strong> They have a thick fat layer up to 10 cm, insulating them from extreme cold.</li>
+            <li><strong>Paws:</strong> Large and wide, with sharp claws for walking on ice and catching prey. Their paw pads have tiny bumps that prevent slipping on icy surfaces.</li>
+            <li><strong>Hearing and Smell:</strong> They have a highly developed sense of smell, capable of detecting prey from miles away.</li>
+            <li><strong>Vision:</strong> Similar to humans, with good night vision to see in the Arctic winter darkness.</li>
+        </ul>
+        <button onclick="goBack()">Back</button>
+    </div>
+    
+    <div class="info" id="fun-facts">
+        <h2>Fun Facts</h2>
+        <ul>
+            <li>Their skin is black, but their fur reflects light, making them appear white.</li>
+            <li>They can smell a seal over 1.5 km away and beneath thick ice.</li>
+            <li>Their bite is as strong as that of a great white shark.</li>
+            <li>They are the only bears considered marine mammals since they depend on the sea for food.</li>
+        </ul>
+        <button onclick="goBack()">Back</button>
+    </div>
+    
+    <div class="info" id="habitat">
+        <h2>Habitat</h2>
+        <p>Polar bears live in the Arctic, on sea ice.</p>
+        <img src="../mammal/images/polar_bear.jpg" alt="Polar Bear">
+        <button onclick="goBack()">Back</button>
+    </div>
+    
+    <script>
+        function showInfo(section) {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById(section).style.display = 'block';
+        }
+        
+        function goBack() {
+            document.querySelectorAll('.info').forEach(div => div.style.display = 'none');
+            document.getElementById('main').style.display = 'block';
+        }
+        document.getElementById("playSound").addEventListener("click", function() {
+            let audio = document.getElementById("audio");
+            audio.currentTime = 0; // Reinicia el sonido cada vez que se presiona
+            audio.play();
+        });
+    </script>
+</body>
+</html>
