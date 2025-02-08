@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <title>Polar Bear - Information</title>
+    <link rel="shortcut icon" href="images/osopolarpng-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,8 +52,15 @@
 
         .carrusel {
             width: 50%;
-            border-radius: 10px;
+            /* Ajusta el tamaño de la imagen al 50% del contenedor */
+            height: auto;
+            /* Mantiene la relación de aspecto */
+        }
 
+
+        footer {
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
@@ -155,28 +163,28 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="carrusel" src="images/oso_polar.jpg" class="d-block w-100" alt="Polar Bear 1">
+                    <img src="images/oso_polar.jpg" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/oso2.webp" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/oso2.webp" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/oso3.jpg" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/oso3.jpg" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/oso4.jpeg" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/oso4.jpeg" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/oso5.jpg" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/oso5.jpg" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/oso6.webp" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/oso6.webp" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/osovsmorsa.jpg" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/osovsmorsa.jpg" class="d-block w-50" alt="Polar Bear 1">
                 </div>
                 <div class="carousel-item">
-                    <img class="carrusel" src="images/oso7.jpg" class="d-block w-100" alt="Polar Bear 1">
+                    <img class="carrusel" src="images/oso7.jpg" class="d-block w-50" alt="Polar Bear 1">
                 </div>
             </div>
             <!-- Controles Anterior/Siguiente -->
@@ -193,7 +201,10 @@
         </div>
     </div>
 
-
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p></span>Por: Ing. Luis David Cazares Morales.<br> Todos los derechos reservados &copy; <span id="year"></span>
+        </p>
+    </footer>
     <script>
         function showInfo(section) {
             document.getElementById('main').style.display = 'none';
@@ -212,6 +223,7 @@
             audio.currentTime = 0;
             audio.play();
         });
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
     <!-- <script src="../mamifero/Bootstrap5/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script> -->
