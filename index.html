@@ -36,7 +36,7 @@
         }
 
         .btn-custom {
-            
+
             width: 80%;
             margin: 5px auto;
             display: flex;
@@ -105,7 +105,7 @@
                 <i class="fa-solid fa-lightbulb me-2"></i> Fun Facts
             </button>
             <button class="btn btn-outline-danger btn-custom" id="playSound">
-                <i class="fa-solid fa-volume-up me-2"></i> Bear's Sound
+                <i class="fa-solid fa-volume-up me-2"></i> Bear Sound
             </button>
 
             <audio id="audio" src="sounds/sonido oso polar.mp3"></audio>
@@ -159,7 +159,9 @@
                 <li>They can smell a seal over 1.5 km away and beneath thick ice.</li>
                 <li>Their bite is as strong as that of a great white shark.</li>
                 <li>They are the only bears considered marine mammals since they depend on the sea for food.</li>
-                <li class="list-group-item"><strong>Did you know? </strong><br>The polar bear is the only bear against which no survival strategy works: whether you run away, hide or fight, it will see you as prey and due to the difficulty it has to get food, it will not miss opportunities.</li>
+                <li class="list-group-item"><strong>Did you know? </strong><br>The polar bear is the only bear against
+                    which no survival strategy works: whether you run away, hide or fight, it will see you as prey and
+                    due to the difficulty it has to get food, it will not miss opportunities.</li>
             </ul>
             <button class="fas fa-arrow-left btn btn-secondary mt-3" onclick="goBack()"> Back</button>
         </div>
@@ -168,13 +170,18 @@
         <div class="info" id="habitat">
             <h2 class="text-info">Habitat</h2>
             <ul class="list-group">
-                <li class="list-group-item"><strong>Geographic Location:</strong> The polar bear lives in the Arctic Circle, in countries such as Canada, Greenland, Norway, Russia, and the United States (Alaska).</li>
-                <li class="list-group-item"><strong>Climate and Conditions:</strong> It lives in an extremely cold environment, with sub-zero temperatures, strong winds, and frozen seas.</li>
-                <li class="list-group-item"><strong>Sea Ice:</strong> Its main habitat is sea ice, where it hunts seals, its main source of food.</li>
-                <li class="list-group-item"><strong>Adaptations to the Environment:</strong> It has a thick coat, a layer of insulating fat, and wide legs that allow it to walk on ice and swim long distances.</li>
-                <li class="list-group-item"><strong>Threats:</strong> Climate change is reducing sea ice, making hunting and survival difficult.</li>
+                <li class="list-group-item"><strong>Geographic Location:</strong> The polar bear lives in the Arctic
+                    Circle, in countries such as Canada, Greenland, Norway, Russia, and the United States (Alaska).</li>
+                <li class="list-group-item"><strong>Climate and Conditions:</strong> It lives in an extremely cold
+                    environment, with sub-zero temperatures, strong winds, and frozen seas.</li>
+                <li class="list-group-item"><strong>Sea Ice:</strong> Its main habitat is sea ice, where it hunts seals,
+                    its main source of food.</li>
+                <li class="list-group-item"><strong>Adaptations to the Environment:</strong> It has a thick coat, a
+                    layer of insulating fat, and wide legs that allow it to walk on ice and swim long distances.</li>
+                <li class="list-group-item"><strong>Threats:</strong> Climate change is reducing sea ice, making hunting
+                    and survival difficult.</li>
             </ul>
-            
+
             <img src="images/artico.webp" alt="Polar Bear habitat" class="mt-3">
             <button class="fas fa-arrow-left btn btn-secondary mt-3" onclick="goBack()"> Back</button>
         </div>
@@ -222,8 +229,17 @@
     </div>
     <!-- pie de pagina -->
     <footer id="myFooter" class="bg-primary text-white text-center py-3 mt-5">
-        <p></span>Ing. Luis David Cazares Morales.<br> &copy; <span id="year"></span> | All rights reserved</span>
-        </p>
+        <p>Ing. Luis David Cazares Morales.<br> &copy; <span id="year"></span> | All rights reserved</p>
+        <div class="social-icons mt-2">
+            <p>My social networks:</p>
+            <a href="https://www.facebook.com/share/1BahyyvGuS/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            </a>
+            <a href="https://www.linkedin.com/in/luis-david-cazares-morales-3a31162a2" target="_blank" class="text-white mx-2">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
     </footer>
     <script>
         function showInfo(section) {
@@ -247,11 +263,11 @@
         });
         document.getElementById("year").textContent = new Date().getFullYear();
         // Seleccionar el footer y el botón
-        const footer = document.getElementById("myFooter");
-        const hideButton1 = document.getElementById("hideButton1");
-        const hideButton2 = document.getElementById("hideButton2");
-        const hideButton3 = document.getElementById("hideButton3");
-        const hideButton4 = document.getElementById("hideButton4");
+        // const footer = document.getElementById("myFooter");
+        // const hideButton1 = document.getElementById("hideButton1");
+        // const hideButton2 = document.getElementById("hideButton2");
+        // const hideButton3 = document.getElementById("hideButton3");
+        // const hideButton4 = document.getElementById("hideButton4");
 
         // Agregar un event listener al botón
         // hideButton1.addEventListener("click", () => {
@@ -266,7 +282,7 @@
         // hideButton4.addEventListener("click", () => {
         //     footer.style.display = "none";
         // });
-       
+
     </script>
 
     <!-- <script src="../mamifero/Bootstrap5/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script> -->
